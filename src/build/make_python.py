@@ -182,10 +182,9 @@ def patch_python_distribution(python_home: str) -> None:
 
     pip_args = python_interpreter_args + ["-m", "pip"]
 
-    for package in ["pip", "certifi", "six", "wheel", "packaging", "requests"]:
+    for package in ["certifi", "six", "wheel", "packaging", "requests"]:
         package_install_args = pip_args + [
             "install",
-            "--user",
             "--upgrade",
             "--force-reinstall",
             package,
