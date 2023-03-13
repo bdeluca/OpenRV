@@ -185,6 +185,7 @@ def patch_python_distribution(python_home: str) -> None:
     for package in ["pip", "certifi", "six", "wheel", "packaging", "requests"]:
         package_install_args = pip_args + [
             "install",
+            "--user",
             "--upgrade",
             "--force-reinstall",
             package,
@@ -194,6 +195,7 @@ def patch_python_distribution(python_home: str) -> None:
 
     wheel_install_args = pip_args + [
         "install",
+        "--user",
         "--upgrade",
         "--force-reinstall",
         "wheel",
